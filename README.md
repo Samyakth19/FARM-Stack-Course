@@ -21,7 +21,7 @@ it uses ASGI which is the interface between your app and the server and the resp
 
 and this is one of the big advantages of having ASGI server implementaion on your side.
 
-Also, one if its big features that it supports coroutines and concurency without the need to import the ASYNCIO module in Python, 
+Also, one if its big features that it supports utines and concurency without the need to import the ASYNCIO module in Python, 
 
 and in a way it's faster than Express which is NodeJs framework ( and Express is E in the MEAN and MERN stacks ).
 

@@ -1,9 +1,10 @@
 #  @bekbrace
 #  FARMSTACK Tutorial - Sunday 13.06.2021
-
+import uvicorn
 from fastapi import FastAPI, HTTPException
 
 from model import Todo
+
 
 from database import (
     fetch_one_todo,

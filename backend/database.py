@@ -1,16 +1,21 @@
-#  @bekbrace
-#  FARMSTACK Tutorial - Sunday 13.06.2021
+# #  @bekbrace
+# #  FARMSTACK Tutorial - Sunday 13.06.2021
 
 import motor.motor_asyncio
 from model import Todo
 
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
-database = client.TodoList
-collection = database.todo
+import motor.motor_asyncio
 
-async def fetch_one_todo(title):
+client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+db = client['TodoList']
+collection = db['todo']
+
+
+async def fetch_one_todo(collection, title):
     document = await collection.find_one({"title": title})
     return document
+
+
 
 async def fetch_all_todos():
     todos = []
